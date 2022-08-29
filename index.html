@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Este proyecto tiene un enfoque BEM -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend-store</title>
+
+    <!-- Normalize -->
+    <link rel="preload" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilo -->
+    <link rel="preload" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+            <!-- El alt es texto alternativo y sirve para cuando no carga la imagen te dice que debería ir ahí, ayuda en el posicionamiento del sitio web -->
+        </a>
+        <!-- Todo lo que rodeé un elemento <a> va a ser un enlace, puede ser cualquier tipo de contenido (h1,h2,img,etc.) -->
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+        <!-- La etiqueta con modificador hace que se mantenga en color secundario cuando estás en la página por eso se pone junto al hover -->
+        <!-- Agregar el link cuando se tengan las páginas tanto en tienda como en nosotros -->
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>Nuestros productos</h1>
+        <div class="grid">
+            <!-- EL grid va a ser un bloque que es la distribución de 3 elementos -->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/1.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">VueJS</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                    <!-- Este div nos ayuda a poner los dos <p> que sirven para el nombre y para el precio -->
+                </a>
+            </div> <!-- fin de bloque producto-->
+            <!-- Producto va a ser otro bloque significativo (no va a depender de nada más)-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/2.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">AngularJS</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- fin de bloque producto-->
+            
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/3.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">ReactJS</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- fin de bloque producto-->
+            
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/4.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Redux</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- fin de bloque producto-->
+            
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/5.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Node.js</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- fin de bloque producto-->
+            
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/6.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">SASS</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div>  <!-- fin de bloque producto-->
+           
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/7.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">HTML5</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- fin de bloque producto-->
+            
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/8.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Github</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div>  <!-- fin de bloque producto-->
+           
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/9.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">BulmaCSS</p>
+                        <!-- BulmaCSS es Framework de CSS similar a bootstrap -->
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- fin de bloque producto-->
+            
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/10.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">TypeScript</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- fin de bloque producto-->
+            
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/11.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Drupa</p>
+                        <!-- Drupa es un administrador de contenidos similar a wordpress pero un poco más avanzado -->
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- fin de bloque producto-->
+            
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/12.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">JavaScript</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- fin de bloque producto-->
+            
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/13.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">GrapQL</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- fin de bloque producto-->
+            
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/14.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Wordpress</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- fin de bloque producto-->
+            <div class="grafico grafico--camisas"></div>
+            <div class="grafico grafico--node"></div>
+            <!-- Con guion medio porque es un modificador, no un elemento -->
+
+        </div>
+    </main>
+
+    <footer class="footer ">
+        <p class="footer__texto ">Front End Store - Todos los derechos reservados 2022</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Este proyecto tiene un enfoque BEM -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend-store</title>
+
+    <!-- Normalize -->
+    <link rel="preload" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilo -->
+    <link rel="preload" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+            <!-- El alt es texto alternativo y sirve para cuando no carga la imagen te dice que debería ir ahí, ayuda en el posicionamiento del sitio web -->
+        </a>
+        <!-- Todo lo que rodeé un elemento <a> va a ser un enlace, puede ser cualquier tipo de contenido (h1,h2,img,etc.) -->
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+        <!-- La etiqueta con modificador hace que se mantenga en color secundario cuando estás en la página por eso se pone junto al hover -->
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>React JS</h1>
+
+        <div class="camisa">
+            <img src="img/3.jpg" alt="Imagen del producto" class="camisa__imagen">
+            <div class="camisa__contenido">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat asperiores minus ipsum, exercitationem rerum dolorem similique blanditiis, molestiae corporis saepe voluptatem ut nesciunt tempora. Nesciunt nisi inventore cupiditate magni eaque?</p>
+
+                <form class="formulario">
+                    <select class="formulario__campo" name="" id="">
+                        <option>-- Seleccionar Talla --</option>
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+
+                    <input class="formulario__campo" type="number" min="1" placeholder="Cantidad">
+
+                    <input class="formulario__submit" type="submit" value="Agregar al carrito">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - Todos los derechos reservados 2022</p>
+    </footer>
+
+</body>
+
+</html>

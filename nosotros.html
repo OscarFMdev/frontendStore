@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Este proyecto tiene un enfoque BEM -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend-store</title>
+
+    <!-- Normalize -->
+    <link rel="preload" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilo -->
+    <link rel="preload" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+            <!-- El alt es texto alternativo y sirve para cuando no carga la imagen te dice que debería ir ahí, ayuda en el posicionamiento del sitio web -->
+        </a>
+        <!-- Todo lo que rodeé un elemento <a> va a ser un enlace, puede ser cualquier tipo de contenido (h1,h2,img,etc.) -->
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace" href="index.html">Tienda</a>
+        <!-- La etiqueta con modificador hace que se mantenga en color secundario cuando estás en la página por eso se pone junto al hover -->
+        <a class="navegacion__enlace navegacion__enlace--activo" href="nosotros.html">Nosotros</a>
+        <!-- Cambiamos el Modificador de Tienda a Nosotros para que cuando se pase a esta página se ilumine la palabra Nosotros -->
+    </nav>
+
+    <main class="contenedor">
+        <h1>Nosotros</h1>
+
+        <div class="nosotros">
+            <div class="nosotros-texto">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet dolore laborum libero. Dolorem harum enim deleniti, reprehenderit a vero molestias accusantium commodi laudantium odio repellendus asperiores! Incidunt, est? Explicabo?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iste molestias, delectus eaque soluta adipisci dolores, veritatis nobis et quia quasi a id blanditiis, numquam laboriosam? Facere facilis voluptates delectus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit accusantium, quo quas vel explicabo, repellat modi reprehenderit rerum ipsa culpa dignissimos ad fugiat. Esse placeat dolor aliquam nostrum! Labore?
+                </p>
+            </div>
+            <img src="img/nosotros.jpg" alt="camisa" class="nosotros nosotros-imagen">
+
+        </div>
+    </main>
+
+    <secttion class="contenedor comprar">
+        <h2 class="comprar__titulo">¿Por qué comprar con nosotros?</h2>
+        <div class="bloques">
+            <div class="bloque">
+
+                <img class="bloque__imagen" src="img/icono_1.png" alt="comprar">
+                <h3 class="bloque__titulo">El mejor precio</h3>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iste molestias, delectus eaque soluta adipisci dolores</p>
+            </div> <!--Bloque-->
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_2.png" alt="">
+                <h3 class="bloque__titulo">Para devs</h3>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iste molestias, delectus eaque soluta adipisci dolores</p>
+            </div> <!--Bloque-->
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_3.png" alt="">
+                <h3 class="bloque__titulo">Envío gratis</h3>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iste molestias, delectus eaque soluta adipisci dolores</p>
+            </div> <!--Bloque-->
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_4.png" alt="">
+                <h3 class="bloque__titulo">La mejor calidad</h3>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iste molestias, delectus eaque soluta adipisci dolores</p>
+            </div> <!--Bloque-->
+
+        </div> <!--Bloques-->
+    </secttion>
+
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - Todos los derechos reservados 2022</p>
+    </footer>
+
+</body>
+
+</html>

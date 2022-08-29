@@ -1,0 +1,341 @@
+/* Custom properties */
+
+:root {
+    --primario: #9C2780;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: #b89603;
+    --blanco: #FFF;
+    --negro: #000;
+    --fuentePrincipal: 'Staatliches', cursive;
+    /* Importante quitarle el font-family que viene antes del nombre de la tipografía */
+}
+
+
+/* box sizing apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* Globales */
+
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    /* Para aplicar 16 pixeles a todo el documento */
+    line-height: 1.5;
+    /* Se interpreta como rem porque es la unidad de la base */
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+    /* le quita la línea a todos los enlaces */
+}
+
+img {
+    max-width: 100%;
+    /* Si lo dejamos como width se hace muy grande aunque depende de la situación se puede usar */
+}
+
+.contenedor {
+    max-width: 120rem;
+    /* ancho máximo de 1200px*/
+    margin: 0 auto;
+    /* para centrarlo */
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: center;
+    /* Las dos líneas de arriba sirven para centrar también puede ser con grid */
+}
+
+.header__logo {
+    margin: 3rem 0;
+    /* Agrega separación con la parte de arriba */
+}
+
+
+/* Navegacion */
+
+.navegacion {
+    background-color: var(--primarioOscuro);
+    /* pinta una línea a través de la pantalla */
+    padding: 1rem 0;
+    /* Hace mas ancha la linea arriba y abajo 1rem y a los lados nada */
+    display: flex;
+    justify-content: center;
+    /* SIrven para pone las palabras del enlace centrados usamos flex para elementos dentro de otro contenedor (hijos) */
+    gap: 2rem;
+    /* Separa los elementos hijos si queremos hacerlo de una forma un poco más antigua debemos de poner en .navegacion_enlace un margin-right y luego poner otra clase que se llame
+    .navegacion__enlace:last-of-type{margin-right:0;} que selecciona el último elemento y le quita el margen para que quede centrado */
+}
+
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+
+.navegacion__enlace:hover,
+.navegacion__enlace--activo {
+    color: var(--secundario);
+    /* Cambia el color al ponerle el cursor encima y para el --activo lo mantiene en amarillo mientras estás en esa página */
+}
+
+/* Grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Hace dos columnas de 1fr (50% ambas) hace que se hagan dos columnas de elementos*/
+    gap: 2rem;
+    /* Es lo mismo que poner gap en columna y en fila */
+}
+
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns:repeat(3, 1fr);
+        /* Hace que tenga 3 columnas en pantalla grande */
+    }
+}
+
+/* Productos */
+
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+    /* Así no queda en la orilla del grid el producto */
+}
+
+.producto__imagen {
+    width: 100%;
+    /* Sirve para que agarre todo el espacio disponible, hace a las imágenes responsivas */
+}
+
+.producto__nombre {
+    font-size: 4rem;
+}
+
+.producto__precio {
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin:2rem 0;
+    /* Por default tenía 4rem así que lo redujimos a1 rem arriba y abajo */
+    text-align: center;
+    line-height: 1.5rem;
+    /* Si no se modifica se tiene 1.5rem que se aplica a el body */
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: var(--primarioOscuro);
+    /* Agrega una línea de fondo en el footer */
+    padding: 1rem 0;
+    margin-top: 1rem;
+    /* Son para agregar ancho y distancia del elemento de arriba respectivamente */
+}
+
+.footer__texto {
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 2.2rem;
+}
+
+/* Gráficos */
+
+.grafico{
+    min-height: 30rem;
+    /* Para que se vean las imágenes de camisas y node en una pantalla chica */
+    background-repeat: no-repeat;
+    /* evita que se repitan las imágenes en un espacio si tienen más tamaño que la imagen, se pone en .grafico porque está en el mismo nivel que node y camisas */
+    background-size: cover; 
+    /* Para que abarque todo el espacio y no se quede corto */
+}
+
+.grafico--camisas{
+    grid-row: 2 / 3;
+    /* Para posicionar el elemento entre las líneas de fila 2 y 3 */
+    grid-column: 1 / 3;
+    /* Que abarque del 1 hasta el 3, si solo se deja así se pierde porque al hacer la pantalla chica y se hagan dos columnas ya no habrá 3  SE PUEDE PONER EN .GRAFICO*/
+    background-image: url(../img/grafico1.jpg);
+    /* Para colocar el gráfico en el espacio en blanco que teníamos  */
+}
+
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-column: 1 / 3;
+    /* Para que abarque todo el espacio en 2 columnas SE PUEDE PONER EN .GRAFICO */
+    grid-row: 8 / 9;
+    /* Para posicionar el grafico en dos columnas */
+}
+
+@media (min-width: 768px) {
+    .grafico--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+        /* Todo el espacio en 3 columnas */
+    } 
+}
+/* Ponerlo dentro de un media querie hace que quite el scroll a los lados porque pusimos 4 y tiene 3 columnas el grid (aunque es necesario para que se alargue la imagen poner el 4) */
+
+
+/* Nosotros */
+.nosotros{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+@media (min-width: 768px) {
+    .nosotros{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 2rem;
+
+    }
+}
+
+.nosotros-imagen{
+   grid-row: 1 / 2;
+   width: 100%;
+}
+
+@media (min-width: 768px) {
+    .nosotros-imagen{
+        grid-column: 2 / 3;
+    }
+}
+
+
+/* Comprar */
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+
+@media (min-width: 768px) {
+    .bloques{
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem;
+        margin: 0 6rem;
+    }
+}
+
+.bloque{
+    text-align: center;
+}
+
+.bloque__titulo{
+    margin: 0;
+    /* Quita el espacio en blanco */
+}
+
+.bloque__imagen{
+    width: 100%;
+}
+
+/* Producto */
+
+.camisa__imagen{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .camisa{
+        display:grid;
+        grid-template-columns:repeat(2, 1fr);
+        column-gap:2rem;
+    }
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.formulario__campo{
+    /* border-color: var(--primarioOscuro); */
+    /* Cambia el color del borde */
+    /* border-width: 1rem; */
+    /* Ancho del borde */
+    /* border-style: solid; */
+    /* Cambia el estilo del borde */
+
+    border: 1rem solid var(--primarioOscuro);
+    /* Sustituye los 3 códigos de arriba por ser mas corto */
+    background-color: var(--primario);
+    color: var(--blanco);
+    text-align: center;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    /* Hace más grande el input */
+    appearance: none;
+}
+
+.formulario__submit{
+    background-color: var(--secundario);
+    border: none;
+    /* Quitar los bordes */
+    font-size: 2rem;
+    /* Hace el texto más grande */
+    font-family: var(--fuentePrincipal);
+    /* Google Font */
+    padding: 2rem;
+    /* Hace el botón más ancho */
+    transition: background-color .3s ease-in-out;
+    /* Cambia la animación de un color a otro, especificar cual se va a aplicar la transisión, cuanto tiempo y el tipo de transisión */
+    grid-column: 1 / 3;
+}
+
+.formulario__submit:hover{
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
