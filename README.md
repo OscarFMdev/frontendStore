@@ -42,9 +42,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-I want to thank my Udemy course instructor for introducing me to web development: [Juan De la torre](https://codigoconjuan.com/)
 
 ## 📝 License
 
